@@ -11,7 +11,8 @@
                 break;
             case 'profil':
                 include('moduladmin/profil.php');
-                break;  
+                break; 
+            /* master user/member */ 
             case 'man_user':
                 include('moduladmin/man_user.php');
                 break;
