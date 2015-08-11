@@ -50,6 +50,9 @@
             case 'man_transaksi_detail':
                 include('moduladmin/man_transaksi_detail.php');
                 break;  
+            /* master rental */
+                include('moduladmin/rental.php');
+                break;
            
         }
     }
