@@ -99,7 +99,7 @@
                         <td><?php echo $no;?></td>
                         <td><?php echo $result['type_kamar'];?></td>
                         <td>
-                            <a href="<?php echo "homeadmin.php?modul=man_kategori_edit&id=$result[id_kategori_kamar]"?>">
+                            <a href="<?php echo "homeadmin.php?modul=man_kategorikamar_edit&id=$result[id_kategori_kamar]"?>">
                                 <i class="fa fa-edit"></i> Edit
                             </a> | 
                             <a href="<?php echo "proses.php?modul=hapusKategori&id=$result[id_kategori_kamar]";?>" onclick="return confirm('Delete?');">

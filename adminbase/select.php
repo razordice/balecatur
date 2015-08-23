@@ -19,12 +19,18 @@
             case 'man_user_edit':
                 include('moduladmin/man_user_edit.php');
                 break;   
+            case 'man_member':
+                include('moduladmin/man_member.php');
+                break;
+            case 'man_member_edit':
+                include('moduladmin/man_member_edit.php');
+                break;  
             /* master type kamar */
             case 'kategorikamar':
-                include('moduladmin/kategorikamar.php');
+                include('moduladmin/man_kategorikamar.php');
                 break; 
-            case 'man_kategori_edit':
-                include('moduladmin/man_kategori_edit.php');
+            case 'man_kategorikamar_edit':
+                include('moduladmin/man_kategorikamar_edit.php');
                 break; 
             /* master kamar */
             case 'man_datakamar':

@@ -6,57 +6,37 @@
 <?php 
 $aksi="proses.php";
 
-    $edit=mysql_query("select * from member where id_member='$_GET[id]'");
-    $r=mysql_fetch_array($edit);
-    $a1 = $r['kode_wilayah'];
-    $a = explode (".", $r['kode_wilayah']);
-    $prov=mysql_query("select * from inf_lokasi where lokasi_propinsi='$a[0]'");
-    $kab=mysql_query("select * from inf_lokasi where lokasi_propinsi='$a[0]' and lokasi_kabupatenkota='$a[1]'");
-    $kec=mysql_query("select * from inf_lokasi where lokasi_propinsi='$a[0]' and lokasi_kabupatenkota='$a[1]' and lokasi_kecamatan='$a[2]'");
-    $kel=mysql_query("select * from inf_lokasi where lokasi_kode='$a1'");
-    $prov=mysql_fetch_array($prov);
-    $kab=mysql_fetch_array($kab);
-    $kec=mysql_fetch_array($kec);
-    $rkel=mysql_fetch_array($kel);
-
+    $edit=mysqli_query($konek,"select * from admin where id_admin='$_GET[id]'");
+    $r=mysqli_fetch_array($edit);
     
-echo "<form method=POST action=$aksi?page=man_user_edit&act=updateUser>
-          <input type=hidden name=id value='$r[id_member]'>
+echo "<form method=POST action=$aksi?modul=man_user_edit&act=updateUser>
+          <input type=hidden name=id value='$r[id_admin]'>
           <table>
           <tr>
           	<td>Nama User </td>
           	<td>: </td>
-          	<td>$r[nama_lengkap]</td>
+          	<td>$r[username]</td>
           </tr>
           <tr>
-            <td>Alamat </td>
-            <td>: </td>
-            <td>$r[alamat], $rkel[lokasi_nama], $kec[lokasi_nama], $kab[lokasi_nama], $prov[lokasi_nama]</td>
-          </tr>
-          <tr>
-            <td>No Tlp </td>
-            <td>: </td>
-            <td>$r[no_tlp]</td>
-          </tr>
-          <tr>
-            <td>Email </td>
-            <td>: </td>
-            <td>$r[email]</td>
-          </tr>
-          <tr>
-          	<td>Blokir </td>
+          	<td>Blokir User </td>
           	<td>: </td>
           	<td> "?>
               <?php 
-              if ($r['blokir'] == "Y") {
-                echo "<input type=radio name='blokir' value='Y' checked> Y ";
-                echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                echo "<input type=radio name='blokir' value='N'> N";
+              if ($r['status'] == "Y") {
+                echo '<label class="radio-inline">
+                          <input type="radio" name="blokir" value="Y" checked> Ya
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="blokir" value="N"> Tidak
+                        </label>';
                 
               } else {
-                echo "<input type=radio name='blokir' value='Y'> Y ";
-                echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-                echo "<input type=radio name='blokir' value='N' checked> N";
+                echo '<label class="radio-inline">
+                          <input type="radio" name="blokir" value="Y"> Ya
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="blokir" value="N" checked> Tidak
+                        </label>';
                 
               }
 

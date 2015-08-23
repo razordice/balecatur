@@ -5,7 +5,7 @@ $username =mysqli_real_escape_string($konek,$_POST['username']);
 $password =mysqli_real_escape_string($konek,md5($_POST['password']));
 
 
-$querinya =mysqli_query($konek,"SELECT * FROM admin WHERE username='$username' AND password='$password' ");
+$querinya =mysqli_query($konek,"SELECT * FROM admin WHERE username='$username' AND password='$password' AND status='N'");
 $ketemu  =mysqli_fetch_array($querinya);                
 
 

@@ -6,10 +6,17 @@
         <li>
             <a href="homeadmin.php?modul=dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
         </li>
-        
+
+        <?php if($_SESSION['level_admin']=="0") { ?>
         <li>
-            <a href="homeadmin.php?modul=man_user"><i class="fa fa-user fa-fw"></i> Manajemen User/Member</a>
+            <a href="#"><i class="fa fa-user fa-fw"></i> Man. User dan Member</a>
+            <i class="fa fa-sort-down has-children"></i>
+            <ul>
+                <li><a href="homeadmin.php?modul=man_user">Man. User</a></li>
+                <li><a href="homeadmin.php?modul=man_member">Man. Member</a></li>
+            </ul>
         </li>
+        <?php } else { echo ""; } ?>
              
         <li>
             <a href="homeadmin.php?modul=manajemen_berita"><i class="fa fa-desktop fa-fw"></i> Manajemen Berita</a>

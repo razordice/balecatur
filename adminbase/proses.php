@@ -6,10 +6,9 @@ $act=$_GET['act'];
 
 // Tambah Kamar
 if ($act=='addKamar'){
-
   $q = "INSERT INTO kamar (id_kategori_kamar, no_kamar) 
   				VALUES('$_POST[kategori]','$_POST[no_kamar]')";
- $success = mysqli_query($konek,$q);
+  $success = mysqli_query($konek,$q);
     if($success) {
         echo "<script>alert('Kamar Berhasil Di simpan!');</script>"; 
         echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_datakamar>";
@@ -21,7 +20,6 @@ if ($act=='addKamar'){
 
 // Update Kamar
 elseif ($act=='updateKamar'){
-
 		$q = "UPDATE kamar SET id_kategori_kamar = '$_POST[kategori]', 
 	  								 no_kamar = '$_POST[no_kamar]'
 	  								WHERE id_kamar='$_POST[id]'"; 
@@ -140,10 +138,32 @@ elseif ($act=='updateOngkir'){
   header('location:adminpanel.php?page=man_ongkir');
 }
 
+// Add User
+elseif ($act=='addUser') {
+  $pass = md5($_POST['password']);
+  $q = "INSERT INTO admin (username, password, level, status) 
+          VALUES('$_POST[username]','$pass','$_POST[user]','$_POST[blokir]')";
+  $success = mysqli_query($konek,$q);
+
+    if($success) {
+        echo "<script>alert('User Berhasil Di simpan!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_user>";
+    } else { 
+        echo "<script>alert('User Gagal Di simpan!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_user>";
+    } 
+}
+
 // Update User
 elseif ($act=='updateUser'){
-  mysql_query("UPDATE member SET blokir ='$_POST[blokir]' WHERE id_member = '$_POST[id]'");
-  header('location:adminpanel.php?page=man_user');
+  $success = mysqli_query($konek,"UPDATE admin SET status ='$_POST[blokir]' WHERE id_admin = '$_POST[id]'");
+    if($success) {
+        echo "<script>alert('User Berhasil Di ubah!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_user>";
+    } else { 
+        echo "<script>alert('User Gagal Di ubah!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_user>";
+    } 
 }
 
 // Hapus User
