@@ -9,6 +9,6 @@ include "../config/koneksi.php";
 	unset($_SESSION['level_admin']);
 	
   	echo "<center>Anda telah sukses keluar sistem <b>[LOGOUT]<b><br/>";
-  	echo "<meta http-equiv='refresh' content='2; url=$site/adminbase'>";
+  	echo "<meta http-equiv='refresh' content='2; url=".$site."adminbase'>";
 
 ?>

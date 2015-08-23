@@ -15,6 +15,7 @@
         <h1 class="page-header">Avaibility Room / Check Ketersediaan Kamar</h1>                
     </div>                
     <div class="col-xs-6">
+    	Ketersediaan kamar tanggal <?php echo date('d-m-Y');?>
     </div>   
     <div class="col-xs-6 ">
     <form class="form-inline pull-right" action="proses.php?act=cekKamarTanggal" method="post" id="add-produk">
@@ -29,7 +30,6 @@
                    <!-- /.col-lg-12 -->
 </div>    
 <div class="clearfix" style="margin-top:2%;"></div>
-<div class="col-lg-12">Ketersediaan kamar tanggal <?php echo date('d-m-Y');?></div>
 <?php 
 $cek = mysqli_query($konek, "select * from kategori_kamar order by type_kamar");
 while ($cekKategori = mysqli_fetch_array($cek)) {

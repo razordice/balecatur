@@ -1,7 +1,7 @@
 <?php session_start();
-// Ini adalah script session yang akan mengecek identitas admin (status = 1).
+// Ini adalah script session yang akan mengecek identitas admin (status = 0).
 include "../config/koneksi.php";
-if ($_SESSION['level_admin'] == 0) {
+if ($_SESSION['level_admin']=="0") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +64,7 @@ if ($_SESSION['level_admin'] == 0) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Balecatur Hotel Admin Panel</a>
+                <a class="navbar-brand" href="<?php echo $site; ?>" target="_blank">Balecatur Hotel Admin Panel</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -78,7 +78,7 @@ if ($_SESSION['level_admin'] == 0) {
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="adminpanel.php?page=profil"><i class="fa fa-user fa-fw"></i> Admin Profile</a>
                         </li>
-                        <li class="divider"></li>
+                        <!-- <li class="divider"></li> -->
                         <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
