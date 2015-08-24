@@ -18,7 +18,8 @@ if ($_SESSION['level_admin']=="0" || $_SESSION['level_admin']=="1") {
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/datepicker.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/lightbox.css" type="text/css">
+    
     <!-- MetisMenu CSS -->
     <link href="css/metisMenu.min.css" rel="stylesheet">
 
@@ -108,6 +109,7 @@ if ($_SESSION['level_admin']=="0" || $_SESSION['level_admin']=="1") {
     </div>
     <!-- /#wrapper -->
 
+<script src="js/lightbox.js" type="text/javascript"></script>
 
 </body>
 

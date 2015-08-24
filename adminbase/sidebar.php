@@ -16,8 +16,12 @@
                 <li><a href="homeadmin.php?modul=man_member">Man. Member</a></li>
             </ul>
         </li>
-        <?php } else { echo ""; } ?>
-             
+        <?php } else { ?>
+        <li>
+            <a href="homeadmin.php?modul=man_member"><i class="fa fa-user fa-fw"></i> Manajemen Member</a>
+        </li>
+        <?php }?>
+        
         <li>
             <a href="homeadmin.php?modul=manajemen_berita"><i class="fa fa-desktop fa-fw"></i> Manajemen Berita</a>
         </li>
