@@ -5,8 +5,8 @@
 /*if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     echo "<script>alert Maaf anda harus login terlebih dahulu !! ; window.location='../index.php?modulpage=sign'/</script>";
 
-}else{
-  */
+}else{*/
+  
 
 ?>
 <!DOCTYPE html>
@@ -44,6 +44,7 @@
 </head>
 <body> 
 <!--************************************** Navi Navigasi *********************************************-->           
+
     <div id="top-nav" class="navbar navbar-fixed-top"><!-- navbar fixed top none scroling down-->
       <div class="navbar-inner">
         <div class="container-navbartop">
