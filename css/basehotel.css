@@ -76,7 +76,7 @@ article{
 }
 /*--------------------------line height--------------------------*/
 .line-featurespackage{
-			width: 1068px;
+			width: 95%;
 }
 /*-------------------setting halaman index hotel position nav bar top fixed scroling*-----------------------/
 .container-navbartop{
@@ -1047,7 +1047,7 @@ a.a-createaccount{
 			margin: 0px 0px 0px 90px;
 }*/
 .pstion-features-package{
-			margin: 0px 0px 0px 13px;
+			margin: 0px 0px 0px 24px; 
 
 }
 .styling-fontfeatures{
@@ -1073,9 +1073,9 @@ a.a-createaccount{
 			height: 400px;
 }
 .container-item{
-			width: 95%;
+			width: 100%;
 			height: 460px;
-			margin: 18px 0px 0px 12px;
+			margin: 18px 0px 0px 24px;
 }
 .container-itemcenter{
 			width: 35%;
@@ -1140,36 +1140,45 @@ a.a-createaccount{
 			margin-bottom: 15px;
 			line-height: 15px;
 }
+/*---------- 	CONFIG CONTACT US 	---------*/
+
+.container-contactus{
+			display: block;
+			width: 100%;
+			height: 500px;
+}
+/*---------- 	CONFIG CLEARFIX 	------------*/
+.clear-fixcont{
+			margin-top: 30px;
+}
+/*----------- 	CONFIG AKOMODASI MENU  -------------*/
+.akomodasi-features{
+			padding-left: 100px;
+			display: block;
+}
+
+
+
+
+/*------ 	CONFIG MORE INFORMATION 	--------*/
+
+.moreinformation-content{
+			background: #FFF none repeat scroll 0% 0%;
+			box-shadow: 1px 1px 4px #C8C8C8;
+			height: auto;
+			margin-bottom: 20px;
+}
 .btn-moreinformation{
 			display: inline-block;
 			padding: 7px 20px 8px 19px;
 			color: #FFF;
 			cursor: pointer;
 			background: #818181 none repeat scroll 0% 0%;
+			width: 70%;
+    		height: 37px;
+    		text-decoration: none;
 }
 .btn-moreinformation:hover{
 			background: #717171 none repeat scroll 0% 0%;
 
-}
-/*-------------------------contact us-----------------------*/
-.container-contactus{
-			display: block;
-			width: 100%;
-			height: 500px;
-}
-.box-contact {
-
-}
-.hereprofile-us{
-
-}
-
-/*------------------------content clearfix-------------------*/
-.clear-fixcont{
-			margin-top: 30px;
-}
-/*-------------------------akomodasi menu-------------------------------*/
-.akomodasi-features{
-			padding-left: 100px;
-			display: block;
 }

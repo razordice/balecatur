@@ -27,7 +27,6 @@
         <input type="text" name="check-in" id="datepicker-example7-start" class="reserve-menuleft" placeholder="Check In" required=""> 
         <input type="text" name="check-out" id="datepicker-example7-end" class="reserve-menuright" placeholder="Check Out" required="">
           	<select name='room-type' class='mega-menuselect' required="">
-          		<!-- <option value=""></option> -->
 		            <?php
 
 		            	echo "<option value='$datakamar'>Room Type</option>";
@@ -59,7 +58,7 @@
                             for ($i=1; $i<=6; $i++) { 
                                 $prnt = ($i<10) ? "$i" : $i;
                                 $select = ($prnt==$parent) ? "selected" : "";
-                                echo "<option value='adl' $select>$prnt</option>";
+                                echo "<option value='prnt' $select>$prnt</option>";
 
                             }
                        ?>
@@ -81,42 +80,25 @@
 			</div>
 			<div class="container-item">
 				<!-- <div class="position-box"> -->
+				<?php 
+
+					$getimage =mysqli_query($konek, "SELECT * FROM kategori_kamar");
+					while ($dataimg =mysqli_fetch_array($getimage)) {
+						
+				?>
 				<div class="itemkamar-hotelsideleft">
-					<img class="sizeimg-room" src="<?php echo $site;?>image/kamar/standart-room.jpg">
+					<img class='sizeimg-room' src='<?php echo $site; ?>image/kamar/<?php echo $dataimg["foto_kamar"];?>'>
 					<span class="content_deskripsi-kamarstandart">
-						<h2 class="font-deskripsi">Superior Room</h2>
+						<h2 class="font-deskripsi"> <?php echo $dataimg['type_kamar']; ?></h2>
 						<article class="article-decript">
 							Kenyamanan extra dengan konsep elegant serta fasilitas yang ditawarkan yang memadai cocok 
 							bagi anda yang menginap dengan nuansa yang klasik dengan alam.
 						</article>
-						<a href="?modul=detail-roomstandart/">
-						<input type="submit" class="btn-moreinformation" value="More Information"></a>
+						<a href="<?php echo $site;?>moreinformation" class="btn-moreinformation" value="More Information">more information</a>
 					</span>
 				</div><!-- itemkamar-hotel-->
-		
-				<div class="itemkamar-hotel-aside-center">
-					<img class="sizeimg-room" src="<?php echo $site;?>image/kamar/standart-room.jpg">
-					<span class="content_deskripsi-kamardeluxe">
-						<h2 class="font-deskripsi">Deluxe Room</h2>
-						<article class="article-decript">
-							Kenyamanan extra dengan konsep elegant serta fasilitas yang ditawarkan yang memadai cocok 
-							bagi anda yang menginap dengan nuansa yang klasik dengan alam.
-						</article>
-						<input type="submit" class="btn-moreinformation" value="More Information">
-					</span>
-				</div><!-- itemkamar-hotel-->
-			
-				<div class="itemkamar-hotel-sideright">
-					<img class="sizeimg-room" src="<?php echo $site;?>image/kamar/standart-room.jpg">
-					<span class="content_deskripsi-kamardeluxefam">
-						<h2 class="font-deskripsi">Deluxe Family Room</h2>
-						<article class="article-decript">
-							Kenyamanan extra dengan konsep elegant serta fasilitas yang ditawarkan yang memadai cocok 
-							bagi anda yang menginap dengan nuansa yang klasik dengan alam.
-						</article>
-						<input type="submit" class="btn-moreinformation" value="More Information">
-					</span>
-				 </div><!-- itemkamar-hotel-->
+				
+				<?php } ?>	
 			</div><!-- container-item-->
 		</div><!-- content-hotel -->
 	</div><!-- wrapper-outerhotel -->

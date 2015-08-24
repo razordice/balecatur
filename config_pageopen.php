@@ -35,6 +35,9 @@
     elseif ($_GET['modul'] =="detail-roomstandart") {
         include ("modulpage/detail-roomstandart.php");
     }
+    elseif($_GET['modul'] =="moreinformation"){
+        include ("modulpage/moreinformation.php");
+    }
     elseif ($_GET['modul'] == "signup"){
         include ("modulpage/member/signup.php");
     }else {
