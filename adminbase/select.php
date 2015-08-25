@@ -57,7 +57,15 @@
                 include('moduladmin/man_transaksi_detail.php');
                 break;  
             /* master rental */
+            case 'man_rental':
                 include('moduladmin/rental.php');
+                break;
+            /* master berita */
+            case 'man_berita':
+                include('moduladmin/man_berita.php');
+                break;
+            case 'man_berita_edit':
+                include('moduladmin/man_berita_edit.php');
                 break;
            
         }

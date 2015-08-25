@@ -168,8 +168,26 @@ elseif ($act=='updateUser'){
 
 // Hapus User
 elseif ($act=='hapusUser'){
-  mysql_query("DELETE FROM member WHERE id_member='$_GET[id]'");
-  header('location:adminpanel.php?page=man_user');
+  $success = mysqli_query($konek,"DELETE FROM admin WHERE id_admin='$_GET[id]'");
+  if($success) {
+        echo "<script>alert('User Berhasil Di ubah!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_user>";
+    } else { 
+        echo "<script>alert('User Gagal Di ubah!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_user>";
+    } 
+}
+
+// Hapus Member
+elseif ($act=='hapusMember'){
+  $success = mysqli_query($konek,"DELETE FROM member WHERE id_member='$_GET[id]'");
+  if($success) {
+        echo "<script>alert('User Berhasil Di ubah!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_member>";
+    } else { 
+        echo "<script>alert('User Gagal Di ubah!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_member>";
+    } 
 }
 
 // Update status order
@@ -184,4 +202,33 @@ if ($act=='updateOrder'){
   mysql_query("UPDATE `order` SET status_order='$status' where id_order='$_POST[id]'");
   header('location:adminpanel.php?page=man_transaksi');
 }
+
+// Add berita
+elseif ($act=='addBerita'){
+  $isi_berita =mysqli_real_escape_string($konek,$_POST['isi_berita']);
+  $waktu = date('Y-m-d H:i:s');
+  $success = mysqli_query($konek, "INSERT INTO berita(judul_berita, isi_berita, waktu) VALUES ('$_POST[judul_berita]','$isi_berita','$waktu')");
+  if($success) {
+        echo "<script>alert('Berita Berhasil Di simpan!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_berita>";
+    } else { 
+        echo "<script>alert('Berita Gagal Di simpan!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_berita>";
+    } 
+}   
+
+// Update berita
+elseif ($act=='updateBerita'){
+  $isi_berita =mysqli_real_escape_string($konek,$_POST['isi_berita']);
+  $success = mysqli_query($konek,"update berita set judul_berita='$_POST[judul_berita]', isi_berita='$isi_berita' where id_berita='$_POST[id]'");
+  if($success) {
+        echo "<script>alert('Berita Berhasil Di edit!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_berita>";
+    } else { 
+        echo "<script>alert('Berita Gagal Di edit!');</script>"; 
+        echo "<meta http-equiv=refresh content=0;url=$site"."adminbase/homeadmin.php?modul=man_berita>";
+    } 
+}
+
+// Hapus berita
 ?>

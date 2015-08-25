@@ -23,7 +23,7 @@
         <?php }?>
         
         <li>
-            <a href="homeadmin.php?modul=manajemen_berita"><i class="fa fa-desktop fa-fw"></i> Manajemen Berita</a>
+            <a href="homeadmin.php?modul=man_berita"><i class="fa fa-desktop fa-fw"></i> Manajemen Berita</a>
         </li>
 
         <li>
