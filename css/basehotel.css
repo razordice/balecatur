@@ -690,7 +690,7 @@ ul.gallery-boxhotel{
 
 }
 
-/*container sign up*/
+/*----- 	CONFIG CONTAINER SIGNNUP  -----*/
 .btnsignup{
 			background: rgb(219, 106, 27) none repeat scroll 0% 0%;
 			color: rgb(255, 255, 255);
@@ -1158,8 +1158,6 @@ a.a-createaccount{
 }
 
 
-
-
 /*------ 	CONFIG MORE INFORMATION 	--------*/
 
 .moreinformation-content{
@@ -1167,6 +1165,31 @@ a.a-createaccount{
 			box-shadow: 1px 1px 4px #C8C8C8;
 			height: auto;
 			margin-bottom: 20px;
+}
+.content-detailimages{
+			padding: 8% 0% 6% 7%;
+}
+.content-detailimages .sizedetailimg-room{
+			width: 60%;
+			height: auto;
+			display: inline-block;
+			border: 2px solid #E6E6E6;
+}
+.content-detailimages .sidedetail-right{
+			float: right;
+		    display: inline-block;
+		    background: hsl(0, 0%, 97%);
+		    width: 40%;
+		    height: auto;
+		    margin: -42% 0px 0px 0px;
+}
+.content-detailimages .inner-detailcontainer{
+			padding: 30px 0px 50px 100px;
+}
+.prizer-colored{
+			color: hsl(25, 78%, 48%);
+		    font-size: 20px;
+		    font-weight: bold;
 }
 .btn-moreinformation{
 			display: inline-block;
@@ -1181,4 +1204,20 @@ a.a-createaccount{
 .btn-moreinformation:hover{
 			background: #717171 none repeat scroll 0% 0%;
 
+}
+.btnpesan-sekarang{
+		    background: hsl(25, 78%, 48%) none repeat scroll 0% 0%;
+		    color: hsl(0, 100%, 100%);
+		    padding: 4px 18px;
+		    border: medium none;
+		    font-family: Open sains,sans-serif;
+		    text-transform: uppercase;
+		    font-weight: bold;
+		    /* box-shadow: 0px 2px 1px hsl(0, 0%, 0%); */
+		    cursor: pointer;
+		    width: 60%;
+		    height: 30px;
+}
+.btnpesan-sekarang:hover{
+			background: #cc3502 none repeat scroll 0% 0%;
 }

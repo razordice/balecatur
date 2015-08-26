@@ -22,7 +22,7 @@
 <div id="wrapper-content">
   	<div class="content-top">
     	<div class="reserve-content">
-
+	    	
      	<form action="" method="post" enctype="multipart/form-data" id="">
         <input type="text" name="check-in" id="datepicker-example7-start" class="reserve-menuleft" placeholder="Check In" required=""> 
         <input type="text" name="check-out" id="datepicker-example7-end" class="reserve-menuright" placeholder="Check Out" required="">
