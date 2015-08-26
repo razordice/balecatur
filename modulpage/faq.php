@@ -1,16 +1,10 @@
-<?php session_start();
-
-	include "config/koneksi.php";
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<head></head>
-<body>
 	<div class="outerwrap-carapesan">
 		<div class="container-carapesan">
+			<div class="heading-breadcumb">
+				<ul>
+					<li>Home >> Faq</li>
+				</ul>
+			</div>
 			<p class="judul-pesan">Bagaimana cara melakukan pemesanan..?</p>
 				<div class="cnt-isipesan">
 				
@@ -48,6 +42,5 @@
 				menyerahkan KTP sebagai jaminan reservasi, setelah membayar anda akan menerima nota reservasi.</div><!-- cnt-isipesanpembayaran -->
 		</div><!-- container-carapesan -->
 	</div><!-- outerwrap-carapesan -->
-</body>
 
 
