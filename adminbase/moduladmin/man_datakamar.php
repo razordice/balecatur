@@ -19,8 +19,10 @@
     }, "Kolom pilih kategori kamar harus dipilih!");
 		});
 	</script>
-    <div class="col-lg-12">                
+    <div class="col-lg-12">
+      <div class="font-sizerheading">
         <h1 class="page-header">Manajemen Kamar</h1>                
+      </div>                
     </div>                
     <div class="col-lg-12">
     	<button class="btn btn-small btn-success tambah">Tambah Kamar</button> 

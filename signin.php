@@ -1,13 +1,16 @@
+<?php include "config/koneksi.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>Hotel Balecatur Inn</title>
 	<!-- src css sigup.css -->
+	<link rel="shorcut icon" href="<?php echo "$site";?>image/icon/favicon.ico.png">
 	<link href="css/basehotel.css" type="text/css" rel="stylesheet"> 
 </head>
 <body>
-<form id="login-form" action="?modulpage/proses=signproses.php" method="post" enctype="multipartformdata">
+<form id="login-form" action="<?php echo $site;?>modulpage/proses/signproses.php" method="post" enctype="multipartformdata">
 	<div class="display-outer"></div>
 	 	<div class="main-logo header.center">
 			<div class="header content.clearfix">
@@ -22,9 +25,9 @@
 		<div class="box sign-card clearfix">
 			<div class="content-cardsignup">
 				<label for="Email"></label>
-					<input class="boxinput" type="email" placeholder="Email" required=""></input>
+					<input class="boxinput" type="email" name="email" placeholder="Email" required=""></input>
 				<label for="Password"></label>
-					<input class="boxinput" type="password" placeholder="Password" required=""></input>
+					<input class="boxinput" type="password" name="password" placeholder="Password" required=""></input>
 				<input type="submit" class="btn-signinuser" value="Login"></input>
 			</div><!-- content-cardsignup -->
 			<div class="createaccount">

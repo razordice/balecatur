@@ -1,7 +1,9 @@
 <?php session_start();
 // Ini adalah script session yang akan mengecek identitas admin (status = 0).
 include "../config/koneksi.php";
-if ($_SESSION['level_admin']=="0" || $_SESSION['level_admin']=="1") {
+
+if ($_SESSION['level_admin']=="1" || $_SESSION['level_admin']=="2" || $_SESSION['level_admin']=="3") {
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -115,6 +117,7 @@ if ($_SESSION['level_admin']=="0" || $_SESSION['level_admin']=="1") {
 
 </html>
 <?php
+
 } else {
     header("Location: index.html");
 }

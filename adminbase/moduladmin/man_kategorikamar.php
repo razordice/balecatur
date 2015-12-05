@@ -1,55 +1,57 @@
 <div class="row">
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('.tambah').click(function() {
-				$('.tambah-content').slideToggle();
-			});
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.tambah').click(function() {
+			$('.tambah-content').slideToggle();
+		});
 
-            tinymce.init({
-                selector: "textarea",
-                plugins: [
-                    "advlist autolink lists link charmap print preview anchor",
-                    "searchreplace visualblocks code fullscreen",
-                    "insertdatetime table contextmenu paste"
-                ],
-                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
-                onchange_callback: function(editor) {
-                  tinyMCE.triggerSave();
-                  $("#" + editor.id).valid();
-                }
-            });
-      
-            var validator = $("#add-kategori").submit(function() {
-                tinyMCE.triggerSave();
-             }).validate({ 
-                ignore: "",
-                messages: {
-                    type_kamar: "Kolom type kamar tidak boleh kosong!",
-                    tarif: "Kolom tarif kamar tidak boleh kosong!",
-                    jumlah_kamar: "Kolom jumlah kamar tidak boleh kosong!",
-                    fasilitas: "Kolom fasilitas kamar tidak boleh kosong!",
-                    foto: "Kolom foto tidak boleh kosong!"
-                }
-            });
-            validator.focusInvalid = function() {
-            // put focus on tinymce on submit validation
-            if (this.settings.focusInvalid) {
-              try {
-                var toFocus = $(this.findLastActive() || this.errorList.length && this.errorList[0].element || []);
-                if (toFocus.is("textarea")) {
-                  tinyMCE.get(toFocus.attr("id")).focus();
-                } else {
-                  toFocus.filter(":visible").focus();
-                }
-              } catch (e) {
-                // ignore IE throwing errors when focusing hidden elements
-              }
+        tinymce.init({
+            selector: "textarea",
+            plugins: [
+                "advlist autolink lists link charmap print preview anchor",
+                "searchreplace visualblocks code fullscreen",
+                "insertdatetime table contextmenu paste"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
+            onchange_callback: function(editor) {
+              tinyMCE.triggerSave();
+              $("#" + editor.id).valid();
             }
-          }
         });
-	</script>
-    <div class="col-lg-12">                
-        <h1 class="page-header">Manajemen Kategori Kamar</h1>                
+  
+        var validator = $("#add-kategori").submit(function() {
+            tinyMCE.triggerSave();
+         }).validate({ 
+            ignore: "",
+            messages: {
+                type_kamar: "Kolom type kamar tidak boleh kosong!",
+                tarif: "Kolom tarif kamar tidak boleh kosong!",
+                jumlah_kamar: "Kolom jumlah kamar tidak boleh kosong!",
+                fasilitas: "Kolom fasilitas kamar tidak boleh kosong!",
+                foto: "Kolom foto tidak boleh kosong!"
+            }
+        });
+        validator.focusInvalid = function() {
+        // put focus on tinymce on submit validation
+        if (this.settings.focusInvalid) {
+          try {
+            var toFocus = $(this.findLastActive() || this.errorList.length && this.errorList[0].element || []);
+            if (toFocus.is("textarea")) {
+              tinyMCE.get(toFocus.attr("id")).focus();
+            } else {
+              toFocus.filter(":visible").focus();
+            }
+          } catch (e) {
+            // ignore IE throwing errors when focusing hidden elements
+          }
+        }
+      }
+    });
+</script>
+    <div class="col-lg-12">     
+        <div class="font-sizerheading">
+            <h1 class="page-header">Manajemen Kategori Kamar</h1>                
+        </div>           
     </div>                
     <div class="col-lg-12">
     	<button class="btn btn-small btn-success tambah">Tambah Kategori</button> 
@@ -66,6 +68,9 @@
                     </div>
                     <div class="form-group">
                         <input class="form-control" placeholder="Tarif Kamar" name="tarif" type="text" autofocus required>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" placeholder="Deskripsi" name="deskripsi" autofocus required>
                     </div>
                     <div class="form-group">
                         <label>Fasilitas Kamar</label>
@@ -90,8 +95,8 @@
             </thead>
             <tbody>
                 <?php 
-                $no=1;
 
+                    $no=1;
                     $query = mysqli_query($konek,"select * from kategori_kamar");
 
                     while ($result = mysqli_fetch_array($query)) { ?>
@@ -102,15 +107,12 @@
                             <a href="<?php echo "homeadmin.php?modul=man_kategorikamar_edit&id=$result[id_kategori_kamar]"?>">
                                 <i class="fa fa-edit"></i> Edit
                             </a> | 
-                            <a href="<?php echo "proses.php?modul=hapusKategori&id=$result[id_kategori_kamar]";?>" onclick="return confirm('Delete?');">
+                            <a href="<?php echo "proses.php?act=hapusKategori&id=$result[id_kategori_kamar]";?>" onclick="return confirm('Hapus data ini ?');">
                                 <i class="fa fa-close"></i> Delete
                             </a> 
                         </td>
                     </tr>
-                <?php
-                    $no++;
-                    }
-                ?>
+                <?php $no++; } ?>
             </tbody>
         </table>
     </div>                

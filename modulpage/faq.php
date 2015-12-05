@@ -1,10 +1,13 @@
 	<div class="outerwrap-carapesan">
 		<div class="container-carapesan">
+		<h1 class="fnt-style">FREQUENTLY ASKED QUESTIONS HOTEL BALECATUR INN</h1>
+		<hr width="389"></hr>
 			<div class="heading-breadcumb">
 				<ul>
 					<li>Home >> Faq</li>
 				</ul>
 			</div>
+			<div style="margin-bottom:20px;"></div>
 			<p class="judul-pesan">Bagaimana cara melakukan pemesanan..?</p>
 				<div class="cnt-isipesan">
 				

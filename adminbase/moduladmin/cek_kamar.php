@@ -11,8 +11,10 @@
 }
 </style>
 <div class="row">
-    <div class="col-lg-12">                
-        <h1 class="page-header">Avaibility Room / Check Ketersediaan Kamar</h1>                
+    <div class="col-lg-12">   
+    	<div class="font-sizerheading">
+        	<h1 class="page-header">Avaibility Room / Check Ketersediaan Kamar</h1>                
+    	</div>             
     </div>                
     <div class="col-xs-6">
     	Ketersediaan kamar tanggal <?php echo date('d-m-Y');?>
@@ -27,12 +29,14 @@
 	  <input type="submit" value="Submit" class="btn btn-small btn-success">
 	</form>
     </div> 
-                   <!-- /.col-lg-12 -->
+<!-- /.col-lg-12 -->
 </div>    
 <div class="clearfix" style="margin-top:2%;"></div>
 <?php 
-$cek = mysqli_query($konek, "select * from kategori_kamar order by type_kamar");
-while ($cekKategori = mysqli_fetch_array($cek)) {
+
+	$cek = mysqli_query($konek, "select * from kategori_kamar order by type_kamar");
+	while ($cekKategori = mysqli_fetch_array($cek)) {
+		
 ?>           
 <div class="row"> 
 	<div class="col-lg-12">                
@@ -50,6 +54,12 @@ while ($cekKategori = mysqli_fetch_array($cek)) {
 
 </div>             
 <?php } ?>
+
+<div class="wrapper-statuskamar">
+	<div class="container-statbar">
+		
+	</div>
+</div>
 <div class="clearfix" style="margin-bottom:5%;"></div>
 
 

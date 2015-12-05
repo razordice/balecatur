@@ -6,7 +6,7 @@
 
     if ($_GET['modul'] == "") {
 
-       include ("modulpage/homepage.php");
+        include ("modulpage/homepage.php");
     }
     elseif ($_GET['modul'] == "homepage") {
         include ("modulpage/homepage.php");
@@ -26,6 +26,9 @@
     elseif ($_GET['modul'] == "reservation"){
         include ("modulpage/reservation.php");
     }
+    elseif ($_GET['modul'] =="myorder") {
+        include ("modulpage/myorder.php");
+    }
     elseif ($_GET['modul'] == "faq"){
         include ("modulpage/faq.php");
     }
@@ -40,6 +43,9 @@
     }
     elseif ($_GET['modul'] == "signup"){
         include ("modulpage/member/signup.php");
+    }
+    elseif ($_GET['modul'] == "konfrimasi") {
+        include ("modulpage/konfrimasi.php");
     }else {
         echo "<p><b>halaman yang diminta tidak ada !!</b></p>";
     }

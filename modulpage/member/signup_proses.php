@@ -4,7 +4,7 @@
 	
 	//tanggapi action
 	
-$act       = $_GET['act'];
+$act = $_GET['act'];
 
 if ($act=='tambah') {
 
@@ -46,6 +46,7 @@ if ($act=='tambah') {
 	$no_telp		=$_POST['no_telp'];
 	$jen_kel		=$_POST['jen_kel'];
 	$alamat     	=$_POST['alamat'];
+	$identitas      =$_POST['identitas'];
 	
 
 	$acak            		=rand(1, 99);
@@ -64,13 +65,13 @@ if ($act=='tambah') {
 	move_uploaded_file($lokasi_file_identitas, $direktori_identitas.$nama_file_identitas);
 	move_uploaded_file($lokasi_file_fotoprofil, $direktori_fotoprofil.$nama_file_fotoprofil);
 
-	echo $query ="INSERT INTO member (id_member, nama_lengkap, password, email, alamat, jenis_kelamin, no_telp, foto_identitas, foto) 
+	$query ="INSERT INTO member (id_member, nama_lengkap, password, email, alamat, jenis_kelamin, no_telp, foto_identitas, foto) 
 		VALUES ('$id_user_new','$nama_lengkap','$password','$email','$alamat','$jen_kel','$no_telp','$nama_file_identitas','$nama_file_fotoprofil')";
 
 
 	$hasil =mysqli_query($konek,$query);
 
-	/*if ($hasil) { ?>
+	if ($hasil) { ?>
 		<div class="wrapper-cntainersucces">
 			<div class="container-success">
 				<p>Terimakasih anda telah melakukan pendaftaran member ! :)</p>
@@ -84,7 +85,7 @@ if ($act=='tambah') {
 		echo "<script>history.go(-1);</script>";
 
 	}
-*/
+
 
 }
 
