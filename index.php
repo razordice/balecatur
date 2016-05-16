@@ -1,13 +1,12 @@
 <?php session_start();
 
-      include "config/koneksi.php";
+include "config/koneksi.php";
 
 /*if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     echo "<script>alert Maaf anda harus login terlebih dahulu !! ; window.location='../index.php?modulpage=sign'/</script>";
-
+/*
 }else{*/
   
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,20 +18,25 @@
 
   <title>Hotel Balecatur Inn</title>
 
-  <!-- favicon-->
+  <!-- FAVICON-->
   <link rel="shorcut icon" href="<?php echo "$site";?>image/icon/favicon.ico.png">
 	<!-- css -->
   <link href="<?php echo $site;?>library/zebra_datepicker/css/default.css" type="text/css" rel="stylesheet">
   <link href="<?php echo $site;?>css/basehotel.css" type="text/css" rel="stylesheet">
   <link href="<?php echo $site;?>css/flexslider.css" type="text/css" rel="stylesheet">
-	<!-- jquery versi 1.11.1 -->
+	<!-- JQUERY VERSION 1.11.1 -->
 	<script type="text/javascript" src="<?php echo $site;?>library/js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="<?php echo $site;?>library/js/jquery.flexslider.js"></script>
   <script type="text/javascript" src="<?php echo $site;?>library/twd-menu.js"></script>
+
+  <!-- DATEPICKER -->
   <script type="text/javascript" src="<?php echo $site;?>library/zebra_datepicker/zebra_datepicker.js"></script>
   <script type="text/javascript" src="<?php echo $site;?>library/zebra_datepicker/core.js"></script>
 
-  <!-- slider function -->
+  <!-- JQUERY VALIDATOR -->
+  <script type="text/javascript" src="<?php echo $site;?>library/validation/dist/jquery.validate.js"></script>
+
+  <!-- SLIDER FUNCTION  -->
 	<script type="text/javascript">
       $(document).ready(function() {
         $('.flexslider').flexslider ({
@@ -56,10 +60,17 @@
                     <li><a href="<?php echo $site;?>roomfeature">room features</a></li>
                     <li><a href="<?php echo $site;?>testimonial">testimonial</a></li>
                     <!-- <li><a href="bukutamu.php">GuestBook</a></li> -->
-                    <li><a href="<?php echo $site;?>reservation">reservation</a></li>
+                
                     <li><a href="<?php echo $site;?>faq">faq</a></li>
+               
+                  <?php if($_SESSION['id_member']) { ?>
+                    <li><a href="<?php echo $site;?>reservation">reservation</a></li>
+                    <li><a href="<?php echo $site;?>myorder">my order</a></li>
+                    <li><a href="<?php echo $site;?>logout.php">Logout<a/></li>
+                  <?php } else { ?>
                     <li><a href="<?php echo $site;?>signup"><input type="submit" value="Sign Up" class="btnsignup"></a></li>
                     <li><a href="<?php echo $site;?>signin.php">Login<a/></li>
+                  <?php } ?>
                 </ul><!-- nav pull-right -->
             </div><!-- nav collapse collapse -->
         </div><!--container-navbartop-->
@@ -83,7 +94,7 @@
     <div id="content">
         <!--page open setup -->
         
-        <?php include "config_pageopen.php"; ?>
+        <?php include "config_pageopen.php";?>
 
     </div>
 
@@ -104,7 +115,7 @@
     <div class="colom-leftinner">
          <div class="bottom-inlinemenus">
             <ul class="menuinlines">
-                <li><a class="menuinlines" href="<?php echo "$site";?>faq">Faq</a></li>
+                <li><a class="menuinlines" href="<?php echo "$site";?>faq">FaQ</a></li>
                 <li><a class="menuinlines" href="">Partners</a></li>
                 <li><a class="menuinlines" href="">About Us</a></li>
                 <li><a class="menuinlines" href="<?php echo "$site";?>contact-us">Contact us</a></li>
@@ -145,6 +156,7 @@
 
 <!--************************************** end of footer ***************************************-->  
    
+
 </body>
 </html>
 

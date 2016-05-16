@@ -1,8 +1,11 @@
 <?php session_start();
     include "../config/koneksi.php";
-if (isset($_SESSION['level_admin'])) {
+
+/*if (isset($_SESSION['level_admin'])) {
     header("Location:".$site."adminbase/homeadmin.php?modul=dashboard");
+
 } else {
+    */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,4 +99,3 @@ if (isset($_SESSION['level_admin'])) {
 </body>
 
 </html>
-<?php } ?>

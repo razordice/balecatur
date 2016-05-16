@@ -1,9 +1,13 @@
-
 <div class="cnt-akomodasi">
 	<div class="post-rulefontakomodasi">
+	<div class="inner-containerakomodasi">
+		
+	</div>
+	<h1 class="fnt-style">AKOMODASI HOTEL BALECATUR INN</h1>
+	<hr width="389"></hr>
 		<div class="heading-breadcumb">
 	    	<ul>
-	    		<li>Home >> Gallery</li>
+	    		<li>Home >> Akomodasi</li>
 	    	</ul>
 	    </div>
 		<div class="sizerakomodasi">

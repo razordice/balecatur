@@ -21,41 +21,44 @@
     });
 </script>
 <div class="row">
-    <div class="col-lg-12">                
-        <h1 class="page-header">Manajemen User</h1>                
+    <div class="col-lg-12"> 
+      <div class="font-sizerheading">
+        <h1 class="page-header">Manajemen User</h1>               
+      </div>               
     </div>                
    	<div class="col-lg-12">
       <button class="btn btn-small btn-success tambah">Tambah User</button> 
       <div class="tambah-content" style="display:none;">
         <div class="panel-body" style="width:40%;">
-         <form role="form" action="proses.php?act=addUser" method="post" id="add-user" enctype="multipart/form-data">
-                <fieldset>
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Username" name="username" type="text" autofocus required>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Password" name="password" type="password" autofocus required>
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" name="user" required>
-                          <option value="0">Pilih User</option>
-                          <option value="1">Admin Sistem</option>
-                          <option value="2">Admin Restoran</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Blokir User : </label>
-                        <label class="radio-inline">
-                          <input type="radio" name="blokir" value="Y"> Ya
-                        </label>
-                        <label class="radio-inline">
-                          <input type="radio" name="blokir" value="N" checked > Tidak
-                        </label>
-                    </div>
-                    <!-- Change this to a button or input when using this as a form -->
-                    <input type="submit" value="Submit" class="btn btn-small btn-success">
-                </fieldset>
-            </form>
+          <form role="form" action="proses.php?act=addUser" method="post" id="add-user" enctype="multipart/form-data">
+            <fieldset>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Username" name="username" type="text" autofocus required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Password" name="password" type="password" autofocus required>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" name="user" required>
+                      <option value="0">Pilih User</option>
+                      <option value="1">Admin Sistem</option>
+                      <option value="2">Admin Restoran</option>
+                      <option value="3">Pimpinan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Blokir User : </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="blokir" value="Y"> Ya
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="blokir" value="N" checked > Tidak
+                    </label>
+                </div>
+                <!-- Change this to a button or input when using this as a form -->
+                <input type="submit" value="Submit" class="btn btn-small btn-success">
+            </fieldset>
+          </form>
         </div>
       </div>
    		<table class="table">
@@ -72,19 +75,23 @@
    				<?php 
     			$no=1;
 
-   					$query = mysqli_query($konek,"select * from admin where level != '0' order by id_admin");
+   					$query = mysqli_query($konek,"select * from admin where level != '3' order by id_admin");
 
 					while ($result = mysqli_fetch_array($query)) { ?>
 					<tr>
 						<td><?php echo $no;?></td>
 						<td><?php echo $result['username'];?></td>
+
             <?php 
-              if($result['level']==1){
-                $user = "Admin Sistem";
-              } else if($result['level']==2) {
-                $user = "Admin Restoran";
-              }
+                if($result['level']==1){
+                  $user = "Admin Sistem";
+                } else if($result['level']==2) {
+                  $user = "Admin Restoran";
+                }elseif ($result['level']==3) {
+                  $user ="Pimpinan";
+                }
             ?>
+
 						<td><?php echo $user;?></td>
 						<td><?php echo $result['status'];?></td>
 						<td>

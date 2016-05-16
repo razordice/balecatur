@@ -1,4 +1,5 @@
 <?php   session_start();
+
 include "../config/koneksi.php";
 
 $username =mysqli_real_escape_string($konek,$_POST['username']);
@@ -13,7 +14,7 @@ if ($ketemu['username']==$username AND $ketemu['password']==$password) {
     $_SESSION['id_admin'] = $ketemu ['id_admin'];
     $_SESSION['username'] = $ketemu ['username'];
     $_SESSION['password'] = $ketemu ['password'];
-    $_SESSION['level_admin']    = $ketemu ['level'];
+    $_SESSION['level_admin'] = $ketemu ['level'];
 
     echo "<script>alert('Selamat datang ".$_SESSION['username']." !!')</script>";
     echo "<meta http-equiv=refresh content=0;url=".$site."adminbase/homeadmin.php?modul=dashboard>";

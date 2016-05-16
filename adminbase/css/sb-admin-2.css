@@ -48,7 +48,10 @@ body {
         border-left: 1px solid #e7e7e7;
     }
 }
-
+/*HEADING STYLE*/
+.font-sizerheading .page-header{
+        font-size: 25px;
+}
 .navbar-top-links {
     margin-right: 0;
 }
@@ -444,7 +447,7 @@ input.form-control.error:focus, textarea.form-control.error:focus, select.form-c
     font-size: 14px;
     text-align: left;
     list-style: none;
-    background-color: #dd4814;
+    background-color: hsl(0, 100%, 100%);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #bf3e11;
@@ -463,4 +466,31 @@ input.form-control.error:focus, textarea.form-control.error:focus, select.form-c
     margin: 9px 0;
     overflow: hidden;
     background-color: #ae3910;
+}
+
+/* CONFIGURE  MAN MEMBER */
+
+.wrapp-manmember{
+    width: 100%;
+    display: inline-block;
+}
+.wrapp-manmember, .container-manmember{
+    background: #f7f7f7;
+    padding: 20px;
+}
+.wrapp-fotomember{
+    display: inline-block;
+    float: right;
+}
+.wrapp-fotomember .box-fotomember{
+    margin: 0px 85px 0px 0px;
+
+}
+.bingkai-member{
+    display: inline-block;
+    border: 4px solid hsl(0, 3%, 80%);
+}
+.bingkai-member, .resizer-foto{
+    height: 200px;
+    width: 300px;
 }

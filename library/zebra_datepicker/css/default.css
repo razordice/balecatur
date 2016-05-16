@@ -19,7 +19,7 @@
 .Zebra_DatePicker           { 
 							  	position: absolute;
 								background: #E16204 none repeat scroll 0% 0%;
-								/*border: 3px solid hsl(0, 100%, 99%);*/
+								border: 3px solid hsl(0, 0%, 44%);
 								z-index: 100;
 								font-family: Tahoma,Arial,Helvetica,sans-serif;
 								font-size: 13px;

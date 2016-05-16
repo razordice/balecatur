@@ -46,15 +46,15 @@
     </div>                
   	<div class="col-lg-12">
 <?php 
-$aksi="proses.php";
 
+    $aksi="proses.php";
+    
     $edit=mysqli_query($konek,"select * from berita where id_berita='$_GET[id]'");
     $r=mysqli_fetch_array($edit);
 echo "
-
-<form method=POST enctype='multipart/form-data' id='edit-berita' action='$aksi?modul=man_berita_edit&act=updateBerita'>
-          <input type=hidden name=id value='$r[id_berita]'>
-          <table>
+    <form method=POST enctype='multipart/form-data' id='edit-berita' action='$aksi?modul=man_berita_edit&act=updateBerita'>
+      <input type=hidden name=id value='$r[id_berita]'>
+        <table>
           <tr>
             <td>Judul Berita </td>
           	<td>:</td>
@@ -63,12 +63,16 @@ echo "
           <tr>
             <td>Isi Berita </td>
             <td>:</td>
-            <td> <textarea name='isi_berita' class='form-control' required>$r[isi_berita]</textarea></td>
+            <td><textarea name='isi_berita' class='form-control' required>$r[isi_berita]</textarea></td>
           </tr>
       	  <tr></tr>
-          <tr><td colspan=2><input type=submit value=Update class='btn btn-small btn-success'>
-                            <input type=button value=Batal class='btn btn-small' onclick=self.history.back()></td></tr>
-          </table></form>";
+          <tr>
+            <td colspan=2>
+            <input type=submit value=Update class='btn btn-small btn-success'>
+            <input type=button value=Batal class='btn btn-small' onclick=self.history.back()>
+            </td>
+          </tr>
+        </table></form>";
 ?>
 
 	</div>

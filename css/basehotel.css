@@ -74,6 +74,17 @@ legend{
 article{
 
 }
+
+fieldset{
+     		padding: 1.35em 1.625em .75em;
+     		margin: 0 2px;
+     		border: 1px solid hsl(0, 14%, 94%);
+}
+.heading-breadcumb{
+			font-size: 13px;
+			font-family:'rudaregular';
+}
+
 /*--------------------------line height--------------------------*/
 .line-featurespackage{
 			width: 95%;
@@ -140,7 +151,7 @@ article{
 
 /*-----seting navbar pull righth-----*/
 #top-nav.navbar .nav {
-		    margin: 1% 0% 0% 32%;
+		    margin: 1% 0% 0% 35%;
 }
 .navbar .nav.pull-right {
 		    float: left;
@@ -399,7 +410,7 @@ li {
 			background: #fff;
 			height: auto;
 			width: 100%;
-		    padding: 9% 0px 0px 7%;
+		    padding: 92px 0px 50px 80px;
 }
 .photo-galle{
 			width: 340px;
@@ -510,7 +521,7 @@ ul.gallery-boxhotel{
 			width: 400px;
 			
 }
-/*--------------------- Reserve menu----------------------------------*/
+/*---------- RESERVE MENU --------------*/
 .notifclick{
 		margin: 20px 0px 0px 0px;
 }
@@ -521,7 +532,7 @@ ul.gallery-boxhotel{
 			display: block;
 			width: 92%;
 			text-align: justify;
-			margin: 18px 0px -33px 0px !important;
+			margin: 18px 0px 0px 0px !important;
 }
 .reserve-content .reserve-menuleft {
 			padding: 0px 0px 0px 10px;
@@ -586,7 +597,7 @@ ul.gallery-boxhotel{
 			background: #C61414 none repeat scroll 0% 0%;
 
 }
-/*----------------------detail room standart----------------------------------*/
+/*----------- DETAIL ROOM STANDART ----------*/
 .detailroom-stndrtcontainer{
 		    margin: 30px;
 			height: 500px;
@@ -602,12 +613,26 @@ ul.gallery-boxhotel{
 			box-shadow: 0px 1px 3px #636363;
 }
 
-/*---------------------- akomodasi------------------------------------*/
+/*----------- CONTAINER AKOMODASI -------------------*/
 .cnt-akomodasi{
 			width: 100%;
-			background: #fff;
-			height: 700px;
+		    background: hsl(0, 100%, 100%);
+		    height: auto;
+		    padding: 92px 0px 50px 80px;
 }
+.inner-containerakomodasi{
+			width:50%;
+}
+/*----------- 	CONFIG AKOMODASI MENU  -------------*/
+.akomodasi-features{
+			padding: 20px;
+		    display: block;
+		    margin-left: 205px;
+}
+/*.post-rulefontakomodasi {
+		    padding: 99px 0px 0px 0px;
+		    width: 50%;
+}*/
 .sizerakomodasi{
 			width: 50%;
 			display: block;
@@ -617,19 +642,36 @@ ul.gallery-boxhotel{
 			height: auto;
 }
 .right-containerakomodasi{
-			width: 152%;
+		    width: 93%;
 		    height: 295px;
-		    float: right;
-		    background: #FCFCFC none repeat scroll 0% 0%;
-		    margin: -302px -437px 0px 0px;
-		    border: 1px solid #D7D7D7;
+		    float: left;
+		    background: hsl(0, 0%, 99%) none repeat scroll 0% 0%;
+		    margin: -302px 0px 0px 0px;
+		    border: 1px solid hsl(0, 0%, 84%);
+}
+
+
+/*---------- CONFIG TESTIMONIAL -----------*/
+.wrapper-testimoni{
+		    border: 1px solid hsl(0, 0%, 79%);
+		    width: 133%;
+		    height: auto;
+		    display: inline-block;
+		    margin: 39px 0px;
+}
+.tgl-headertesti{
+			font-size: 14px;
+}
+.wrapper-tesstimoni, .inner-containertesti{
+			padding: 20px;
+			display: inline-block;
 
 }
-/*---------------------- reserve menu----------------------------------*/
+/*---------- RESERVE MENU ---------------*/
 .cnt-reserve{
 			width: 100%;
 			background: #fff;
-			height: 700px;
+			height: auto;
 }
 .fnt-style{
 			font-size: 20px;
@@ -639,33 +681,42 @@ ul.gallery-boxhotel{
 			font-style: italic;
 			font-weight: bold;
 }
-.post-rulefontreserve{ /* container reserve*/
+/*------------ container reserve -------*/ 
+.post-rulefontreserve{ 
 			font-size: 20px;
 			color: #6B655D;
 			text-align: left;
 			font-family: roboto;
+		   	padding: 92px 0px 50px 80px;
+		    width: 72%;
 }
-
-/*.post-rulefont .fnt-style{
-			font-size: 12px;
-			color: #6B655D;
-			text-align: left;
-			font-family: roboto;
-			font-style: italic;
-			font-weight: bold;
-}*/
 .box-input{
 			padding: 8px;
-			margin: 3px;
-			width: 45em;
+		    margin: 3px;
+		    width: 98%;
+		    display: inline-block;
 
 }
+.box-reserveclient{
+		    margin-top: 20px;
+   		 	font-size: 14px;
+    		margin-left: 20px;
+		    margin-bottom: 15px;
+
+}
+.box-reservclient ,.deskrip-reserveright{
+			margin-left: 10px !important;
+    		display: inline-block;
+}
+.box-reservclient ,.deskrip-reserveleft{
+			margin-left: 7px !important;
+    		margin-right: 59px !important;
+    		display: inline-block;
+}
 .tb-reserve{
-			margin: 67px 0px 0px 1px;
+		    margin: 28px 0px 0px 1px;
 			font-size: 14px;
     		color: #717171;
-
-
 }
 .btn{
 			background: #0077DB none repeat scroll 0% 0%;
@@ -680,7 +731,6 @@ ul.gallery-boxhotel{
     		font-weight: bold;
     		font-size: 12px;
 }
-
 .btn-reserve{
 			border-radius: 2px;
 
@@ -777,20 +827,26 @@ ul.gallery-boxhotel{
 }
 .sign-card{
 			padding: 25px;
-			width: 400px;
-			height: 310px;
-			background-color: #FFF;
-			margin: 0px auto 25px;
-			box-shadow: 0px 2px 3px rgba(188, 188, 188, 0.8);
+		    width: 400px;
+		    height: 250px;
+		    background-color: hsl(0, 100%, 100%);
+		    margin: 0px auto 25px;
+		    box-shadow: 0px 2px 3px hsla(0, 0%, 74%, 0.8);
 		
 }
 /*---------------akhir dari sign card---------------------*/
 
 /*----------------seting box sign up----------------------*/ 
 .form-box{
-
 			border: 1px solid hsl(0, 0%, 77%);
   			border-radius: 3px;
+}
+.cursorbox{
+			cursor: pointer;
+}
+.cursorkodebook{
+			cursor: not-allowed;
+
 }
 .boxinput{
 			position: relative;
@@ -842,7 +898,7 @@ ul.gallery-boxhotel{
 			padding: 5px;
 			margin: 3px;
 			cursor: pointer;
-			width: 10em;
+			width: 100%;
 }
 /*-------------------akhri dari box input--------------------*/
 
@@ -956,53 +1012,53 @@ a.a-createaccount{
 			padding: 33px  0px 0px 28px;
 			background: #fff;
 }
-.post-rulefontreserve{
-		    padding: 99px 0px 0px 75px;
-		    width: 72%;
-	
-}
-/*content cara pesan*/
+
+
+/*------ CONTENT CARA PESAN ----*/
 .outerwrap-carapesan .container-carapesan{
 			width: 100%;
-			height: 850px;
+			height: auto;
 			background: #fff;
 
 }
 .container-carapesan{
-			padding:127px 80px 0px;
+			padding: 92px 0px 50px 80px;
 }
 
 .judul-pesan{
 			width: 100%;
 			font-family: Arial;
-			font-size: 25px;
-			color:#0082d8;
+		    font-size: 18px;
+    		color: hsl(24, 79%, 50%);
 }
 .post-rulefontsignup{
 			padding: 105px 0px 0px 79px;
 			width: 100%;
 }
-.post-rulefontakomodasi {
-		    padding: 99px 0px 0px 0px;
-		    width: 50%;
-}
+
 .cnt-isipesan{
 			margin: 10px 0px 20px 0px;
 		    font-size: 13px;
 		    text-align: justify;
 		    line-height:20px;
+	        width: 92%;
+    		display: inline-block;
 }
 .cnt-isipesanmember{
 			margin: 10px 0px 20px 0px;
 			font-size: 13px;
 			text-align: justify;
 			line-height: 20px;
+			width: 92%;
+    		display: inline-block;
 }
 .cnt-isipesanpembayaran{
 			margin: 10px 0px 20px 0px;
 			font-size: 13px;
 			text-align: justify;
 			line-height: 20px;
+			width: 92%;
+			display: inline-block;
 }	
 .wrapper-outerregist .content-register{
 			width: 100%;
@@ -1151,13 +1207,6 @@ a.a-createaccount{
 .clear-fixcont{
 			margin-top: 30px;
 }
-/*----------- 	CONFIG AKOMODASI MENU  -------------*/
-.akomodasi-features{
-			padding-left: 100px;
-			display: block;
-}
-
-
 /*------ 	CONFIG MORE INFORMATION 	--------*/
 
 .moreinformation-content{
@@ -1179,9 +1228,9 @@ a.a-createaccount{
 			float: right;
 		    display: inline-block;
 		    background: hsl(0, 0%, 97%);
-		    width: 40%;
+		    width: 38%;
 		    height: auto;
-		    margin: -42% 0px 0px 0px;
+		    margin: -42% 12px 0px 0px;
 }
 .content-detailimages .inner-detailcontainer{
 			padding: 30px 0px 50px 100px;
@@ -1220,4 +1269,49 @@ a.a-createaccount{
 }
 .btnpesan-sekarang:hover{
 			background: #cc3502 none repeat scroll 0% 0%;
+}
+/* CONFIG KONFRIMASI */
+
+#wrapper-konfrimasi{
+			padding: 11% 0% 5% 3%;
+			background: hsl(0, 0%, 97%);
+}
+#wrapper-konfrimasi .box-konfrimasi{
+	        width: 100%;
+			height: auto;
+			display: inline-block;
+			padding: 0% 6% 0% 2%;
+}
+#wrapper-konfrimasi .position-heading .styling-fontknfrimasi{
+		    font-family: 'rudaregular';
+			font-size: 20px;
+			font-weight:bold;
+			color:#848484;
+    		border-bottom: 3px solid #6c6c6c;
+}
+#box-innerkonfrimation{
+			width: 100%;
+		    display: inline-block;
+		    height: auto;
+		    border: 1px solid hsl(0, 2%, 70%);
+		    margin: 2% 0% 0% 0%;
+    		padding: 2% 0% 3% 2%;
+}
+.borderer-boxkonfrimation .space-rincianmenus{
+			margin-left: 20px !important;
+			margin-top: 10px;
+}
+.outer-headingharga{
+			display: inline-block;
+			float: left;
+}
+/*---- container fluid -------*/
+
+.box-grup{
+			width: 100%;
+			font-size: 12px;
+}
+.form-grupingbox{
+			float: left;
+			display: inline-block;
 }

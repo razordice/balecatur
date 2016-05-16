@@ -1,6 +1,8 @@
 <div class="row">
-    <div class="col-lg-12">                
+    <div class="col-lg-12">  
+      <div class="font-sizerheading">
         <h1 class="page-header">Manajemen Member</h1>                
+      </div>              
     </div>                
    	<div class="col-lg-12">
    		<table class="table">
